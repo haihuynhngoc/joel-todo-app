@@ -1,0 +1,47 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "A full-stack todo application - React Native + Node.js + PostgreSQL",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/todo-app.git"
+  },
+  "keywords": [
+    "react-native",
+    "typescript",
+    "nodejs",
+    "express",
+    "postgresql",
+    "rest-api",
+    "full-stack",
+    "portfolio",
+    "monorepo"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "scripts": {
+    "install:all": "npm install && cd server && npm install && cd ../mobile && npm install",
+    "migrate": "cd server && npm run migrate",
+    "dev:server": "cd server && npm run dev",
+    "dev:mobile": "cd mobile && npm start",
+    "dev:web": "cd mobile && npm run web",
+    "build:server": "cd server && npm run build",
+    "test:server": "cd server && npm test",
+    "test:mobile": "cd mobile && npm test",
+    "test": "npm run test:server && npm run test:mobile",
+    "lint:server": "cd server && npm run lint",
+    "lint:mobile": "cd mobile && npm run lint",
+    "lint": "npm run lint:server && npm run lint:mobile",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "react-test-renderer": "^19.1.0"
+  }
+}
